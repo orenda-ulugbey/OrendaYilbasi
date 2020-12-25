@@ -18,3 +18,5 @@ Merkez Led -> 10 /
 İkinci Sıra -> 11 / 
 Üçüncü Sıra -> 12 / 
 Buton -> 7
+
+Eğer bir sorun ile karşılaştıysanız Instagram hesabımızdan (@orenda_ulugbey) bize ulaşırsanız size yardım etmekten mutluluk duyarız :)
