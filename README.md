@@ -1,4 +1,4 @@
-Biz yaparken çok eğlendik umarız sizin de yaparken eğlendiğiniz bir proje olmuştur :)
+Biz yaparken çok eğlendik umarız sizin de yaparken eğleneceğiniz bir proje olmuştur :)
 
 Malzemeler:
 
