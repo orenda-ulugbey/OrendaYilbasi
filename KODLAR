@@ -1,0 +1,330 @@
+
+Instagram:
+@orenda_ulugbey
+
+#include <Pushbutton.h>
+
+int sayac = 0;
+bool ledDurum = true;
+
+#define button 7
+#define birinciLed 10
+#define ikinciLed 11
+#define ucuncuLed 12
+
+Pushbutton pbutton(button);
+
+void setup() {
+  
+  pinMode (birinciLed, OUTPUT);
+  pinMode (ikinciLed, OUTPUT);
+  pinMode (ucuncuLed, OUTPUT);
+  Serial.begin(9600);
+  
+}
+
+void loop() {
+  
+  digitalWrite (birinciLed, LOW);
+  digitalWrite (ikinciLed, LOW);
+  digitalWrite (ucuncuLed, LOW);
+  
+  
+    if (pbutton.isPressed()){
+      sayac = sayac + 1; //Butona Basılsığında Sayaç Artacak ve Mod Değiştirecek
+      delay(1000);
+      Serial.println(sayac);
+    }
+    
+if (sayac == 0) {
+  
+  digitalWrite (birinciLed, HIGH);
+  digitalWrite (ikinciLed, HIGH);
+  digitalWrite (ucuncuLed, HIGH);
+  Serial.println(sayac);
+  
+}
+
+ if (sayac == 1){
+
+  for (int i = 0; i < 800; i++){
+    digitalWrite(birinciLed, HIGH);
+    digitalWrite(ikinciLed, HIGH);
+    digitalWrite(ucuncuLed, HIGH);
+    delay(1);
+    Serial.println(sayac);
+    if(digitalRead(button) == false)
+    {
+      sayac = 2;
+      break;
+    }
+    
+    else
+    {
+      sayac = 1;
+    }
+  }  
+    for (int i = 0; i < 800; i++){
+    digitalWrite(birinciLed, LOW);
+    digitalWrite(ikinciLed, LOW);
+    digitalWrite(ucuncuLed, LOW);
+    delay(1);
+    Serial.println(sayac);
+    if(digitalRead(button) == false)
+    {
+      sayac = 2;
+      delay(500);
+      break;
+    }
+    
+    else
+    {
+      sayac = 1;
+    }
+  }
+ } 
+
+ if (sayac == 2){
+  
+for(int i = 0; i < 3400; i++){
+  if(sayac == 3){
+    sayac = 3;
+    break;
+  }
+  digitalWrite(birinciLed, HIGH);
+  for(int x = 0 ; x < 700; x++){
+    if(digitalRead(button) == false)
+    {
+      sayac = 3;
+      delay(500);
+      break;
+    }
+    
+    else
+    {
+      sayac = 2;
+    }
+  }
+  digitalWrite(ikinciLed, HIGH);
+  for(int y = 0; y < 700; y++){
+    if(digitalRead(button) == false)
+    {
+      sayac = 3;
+      delay(500);
+      break;
+    }
+    
+    else
+    {
+      sayac = 2;
+    }
+  }
+  digitalWrite(ucuncuLed, HIGH);
+  for(int z = 0; z < 700; z++){
+    if(digitalRead(button) == false)
+    {
+      sayac = 3;
+      delay(500);
+      break;
+    }
+    
+    else
+    {
+      sayac = 2;
+    }
+  }
+}
+  for (int i = 0; i < 200; i++){
+    digitalWrite(birinciLed, HIGH);
+    digitalWrite(ikinciLed, HIGH);
+    digitalWrite(ucuncuLed, HIGH);
+    delay(1);
+    Serial.println(sayac);
+    if(digitalRead(button) == false)
+    {
+      sayac = 3;
+      break;
+    }
+    
+    else
+    {
+      sayac = 2;
+    }
+  }  
+    for (int i = 0; i < 200; i++){
+    digitalWrite(birinciLed, LOW);
+    digitalWrite(ikinciLed, LOW);
+    digitalWrite(ucuncuLed, LOW);
+    delay(1);
+    Serial.println(sayac);
+    if(digitalRead(button) == false)
+    {
+      sayac = 3;
+      delay(500);
+      break;
+    }
+    
+    else
+    {
+      sayac = 2;
+    }
+  }
+Serial.println(sayac);
+ }
+
+ if (sayac == 3){
+  
+for (int i = 0; i< 150; i++){
+  digitalWrite(birinciLed, HIGH);
+  delay(1);
+  if (digitalRead(button) == false)
+  {
+    sayac = 4;
+    delay(500);
+    break;
+  }
+  
+  else
+  {
+    sayac = 3;
+  }
+}
+digitalWrite(birinciLed, LOW);
+
+for (int i = 0; i< 150; i++){
+  digitalWrite(ikinciLed, HIGH);
+  delay(1);
+  if (digitalRead(button) == false)
+  {
+    sayac = 4;
+    delay(500);
+    break;
+  }
+  
+  else
+  {
+    sayac = 3;
+  }
+}
+digitalWrite(ikinciLed, LOW);
+
+for (int i = 0; i< 150; i++){
+  digitalWrite(ucuncuLed, HIGH);
+  delay(1);
+  if (digitalRead(button) == false)
+  {
+    sayac = 4;
+    delay(500);
+    break;
+  }
+  
+  else
+  {
+    sayac = 3;
+  }
+}
+digitalWrite(ucuncuLed, LOW);
+
+Serial.println(sayac);
+
+}
+
+if (sayac == 4){
+
+for (int i = 0; i < 250; i++){
+  digitalWrite(birinciLed, HIGH);
+  delay(1);
+  if (digitalRead(button) == false)
+  {
+    sayac = 5;
+  }
+  
+  else
+  {
+    sayac = 4;
+  }
+}
+
+for (int i = 0; i < 250; i++){
+  digitalWrite(ikinciLed, HIGH);
+  delay(1);
+  if (digitalRead(button) == false)
+  {
+    sayac = 5;
+  }
+  
+  else
+  {
+    sayac = 4;
+  }
+}
+
+for (int i = 0; i < 250; i++){
+  digitalWrite(ucuncuLed, HIGH);
+  delay(1);
+  if (digitalRead(button) == false) {
+    sayac = 5;
+  }
+  else{
+    sayac = 4;
+  }
+}
+
+for (int i = 0; i < 250; i++){
+  digitalWrite(birinciLed, LOW);
+  delay(1);
+  if (digitalRead(button) == false) {
+    sayac = 5;
+  }
+  else{
+    sayac = 4;
+  }
+}
+
+for (int i = 0; i < 250; i++){
+  digitalWrite(ikinciLed, LOW);
+  delay(1);
+  if (digitalRead(button) == false)
+  {
+    sayac = 5;
+  }
+  
+  else
+  {
+    sayac = 4;
+  }
+}
+
+for (int i = 0; i < 250; i++){
+  digitalWrite(ucuncuLed, LOW);
+  delay(1);
+  if (digitalRead(button) == false)
+  {
+    sayac = 5;
+  }
+  
+  else
+  {
+    sayac = 4;
+  }
+}
+  Serial.println(sayac);
+
+}
+
+if (sayac == 5){
+  
+digitalWrite(birinciLed, LOW);
+digitalWrite(ikinciLed, LOW);
+digitalWrite(ucuncuLed, LOW);
+  Serial.println(sayac);
+
+}
+
+if (sayac == 6){
+  sayac = 0;
+  delay(1000);
+  Serial.println(sayac);
+  } 
+
+}
