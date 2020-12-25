@@ -14,7 +14,7 @@ Ledleri 2 sıra halinde yıldızın kollarına yapıştırıyoruz. Sonra bütün
 
 Bağlantı:
 
-Merkez Led -> 10
-İkinci Sıra -> 11
-Üçüncü Sıra -> 12
+Merkez Led -> 10 / 
+İkinci Sıra -> 11 / 
+Üçüncü Sıra -> 12 / 
 Buton -> 7
